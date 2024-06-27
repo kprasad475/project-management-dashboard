@@ -1,0 +1,10 @@
+.dashboard-container {
+    margin-left: 250px;
+    padding: 20px;
+  }
+  .cards-container, .charts-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  

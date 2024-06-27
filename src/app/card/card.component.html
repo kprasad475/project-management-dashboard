@@ -1,0 +1,9 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <canvas *ngIf="data" baseChart [datasets]="data.datasets" [labels]="data.labels"></canvas>
+    </mat-card-content>
+  </mat-card>
+  
