@@ -1,16 +1,19 @@
 <div class="dashboard-container">
-    <app-sidebar></app-sidebar>
-    <div class="main-content">
-      <app-header></app-header>
-      <div class="content">
+  <app-sidebar></app-sidebar>
+  <div class="main-content">
+    <app-header></app-header>
+    <div class="content">
+      <div class="cards-container">
         <mat-card>
-          <h2>Email Statistics</h2>
+          <h2> Email Statistics</h2>
           <app-chart [data]="emailStatisticsData" [type]="'pie'"></app-chart>
         </mat-card>
         <mat-card>
           <h2>Users Behavior</h2>
           <app-chart [data]="usersBehaviorData" [type]="'line'"></app-chart>
         </mat-card>
+      </div>
+      <div class="cards-container">
         <mat-card>
           <h2>2014 Sales</h2>
           <app-chart [data]="salesData" [type]="'bar'"></app-chart>
@@ -22,4 +25,4 @@
       </div>
     </div>
   </div>
-  
+</div>

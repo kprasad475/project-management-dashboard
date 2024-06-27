@@ -1,0 +1,36 @@
+.user-profile {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    /* Ensure profile component styles don't get hidden under sidebar */
+    z-index: 1; /* Ensure component stays above other elements if needed */
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .profile-info {
+    flex: 1;
+  }
+  
+  .profile-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .profile-bio {
+    margin-top: 20px;
+  }
+  
+  /* Add more styles as needed for additional profile details or actions */
+  

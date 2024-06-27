@@ -1,10 +1,16 @@
-<mat-nav-list>
-    <mat-list-item>Dashboard</mat-list-item>
-    <mat-list-item>User Profile</mat-list-item>
+<!-- app.component.html -->
+<div class="app-container">
+  <mat-nav-list class="sidebar">
+    <mat-list-item (click)="navigateToDashboard()">Dashboard</mat-list-item>
+    <mat-list-item (click)="navigateToUserProfile()">User Profile</mat-list-item>
     <mat-list-item>Table List</mat-list-item>
     <mat-list-item>Typography</mat-list-item>
     <mat-list-item>Icons</mat-list-item>
     <mat-list-item>Maps</mat-list-item>
     <mat-list-item>Notifications</mat-list-item>
   </mat-nav-list>
-  
+  <div class="main-content">
+    <router-outlet></router-outlet>
+    <!-- This outlet will display the UserProfileComponent or other routed components -->
+  </div>
+</div>

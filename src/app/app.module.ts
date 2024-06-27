@@ -19,6 +19,7 @@ import { MatListModule } from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 
 import { NgChartsModule } from 'ng2-charts';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 
@@ -29,7 +30,8 @@ import { NgChartsModule } from 'ng2-charts';
     HeaderComponent,
     DashboardComponent,
     ChartComponent,
-    CardComponent
+    CardComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

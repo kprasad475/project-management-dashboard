@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, Input, PLATFORM_ID } from '@angular/core';
 import { ChartData, ChartType } from 'chart.js';
 
 @Component({
@@ -9,4 +10,10 @@ import { ChartData, ChartType } from 'chart.js';
 export class ChartComponent {
   @Input() data: ChartData<'pie' | 'line' | 'bar'>;
   @Input() type: ChartType;
+
+  isBrowser: boolean;
+
+  constructor( @Inject(PLATFORM_ID) platformId: Object) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 }
