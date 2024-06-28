@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-user-profile',
@@ -9,14 +10,46 @@ export class UserProfileComponent {
   user = {
     name: 'John Doe',
     email: 'john.doe@example.com',
-    avatar: 'https://example.com/avatar.jpg',
-    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    // Add more properties as needed
+    bio: 'This is the bio of John Doe.',
+    avatar: 'assets/avatar.jpg',
+    linkedin: 'https://www.linkedin.com/in/johndoe',
+    twitter: 'https://twitter.com/johndoe'
   };
 
-  constructor() { }
+  isEditing = false;
+  editProfileForm: FormGroup;
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    // Initialize component
+    this.editProfileForm = this.fb.group({
+      name: [this.user.name],
+      email: [this.user.email],
+      bio: [this.user.bio],
+      avatar: [this.user.avatar]
+    });
+  }
+  ngOnInits(){
+    this.editProfileForm = this.fb.group({
+      name:[this.user.name],
+      email:[this.user.email],
+      bio:[this.user.bio],
+      avatar:[this.user.avatar]
+    })
+  }
+
+  editProfile(): void {
+    this.isEditing = true;
+  }
+
+  cancelEdit(): void {
+    this.isEditing = false;
+  }
+
+  saveProfile(): void {
+    if (this.editProfileForm.valid) {
+      this.user = { ...this.user, ...this.editProfileForm.value };
+      this.isEditing = false;
+    }
   }
 }

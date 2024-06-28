@@ -1,14 +1,28 @@
-<div class="user-profile">
-    <div class="profile-header">
-      <img class="avatar" [src]="user.avatar" alt="User Avatar">
-      <div class="profile-info">
-        <h2>{{ user.name }}</h2>
-        <p>{{ user.email }}</p>
+<div class="user-profile-container">
+  <div class="user-header">
+    <img src="assets/avatar.jpg" alt="Avatar" class="avatar">
+    <div class="user-info">
+      <h2>John Doe</h2>
+      <p class="email">john.doe example.com</p>
+      <p class="bio">This is the bio of John Doe.</p>
+      <button class="edit-profile-btn" (click)="editProfile()">Edit Profile</button>
+    </div>
+  </div>
+  <div class="social-media">
+    <h3>Social Media</h3>
+    <a href="#" class="social-link">🔗</a>
+  </div>
+  <div class="user-details">
+    <h3>Details</h3>
+    <div class="details-form">
+      <input type="text" [(ngModel)]="user.name" placeholder="Name">
+      <input type="email" [(ngModel)]="user.email" placeholder="Email">
+      <textarea [(ngModel)]="user.bio" placeholder="Bio"></textarea>
+      <input type="text" [(ngModel)]="user.avatar" placeholder="Avatar URL">
+      <div class="form-actions">
+        <button (click)="saveProfile()">Save</button>
+        <button (click)="cancelEdit()">Cancel</button>
       </div>
     </div>
-    <div class="profile-bio">
-      <p>{{ user.bio }}</p>
-    </div>
-    <!-- Add more profile details or actions as needed -->
   </div>
-  
+</div>

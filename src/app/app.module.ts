@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {MatDialogModule} from  '@angular/material/dialog'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -20,6 +20,8 @@ import {MatIconModule} from '@angular/material/icon';
 
 import { NgChartsModule } from 'ng2-charts';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { provideHttpClient } from '@angular/common/http';
 
 
 
@@ -41,11 +43,13 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     MatIconModule,MatInputModule,
     MatSlideToggleModule,MatListModule,
     MatToolbarModule,
-    NgChartsModule,BrowserAnimationsModule
+    NgChartsModule,BrowserAnimationsModule,
+    FormsModule,MatDialogModule,ReactiveFormsModule
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })
