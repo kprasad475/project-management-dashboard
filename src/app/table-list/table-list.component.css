@@ -1,0 +1,43 @@
+mat-card {
+    margin: 20px;
+  }
+  
+  mat-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #3f51b5;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  .mat-column-id, .mat-column-name, .mat-column-status, .mat-column-priority, .mat-column-startDate, .mat-column-endDate, .mat-column-actions {
+    text-align: center;
+  }
+  
+  .status-completed {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .status-in-progress {
+    color: orange;
+    font-weight: bold;
+  }
+  
+  .status-not-started {
+    color: red;
+    font-weight: bold;
+  }
+  
+  button {
+    margin: 0 5px;
+  }
+  

@@ -14,4 +14,7 @@ export class SidebarComponent {
   navigateToDashboard():void{
     this.router.navigate(['/dashboard'])
   }
+  navigateToTableList():void{
+    this.router.navigate(['/table-list'])
+  }
 }

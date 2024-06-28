@@ -22,6 +22,9 @@ import { NgChartsModule } from 'ng2-charts';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
+import { TableListComponent } from './table-list/table-list.component';
+import { MatTableModule } from '@angular/material/table'  
+
 
 
 
@@ -33,7 +36,8 @@ import { provideHttpClient } from '@angular/common/http';
     DashboardComponent,
     ChartComponent,
     CardComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    TableListComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,8 @@ import { provideHttpClient } from '@angular/common/http';
     MatSlideToggleModule,MatListModule,
     MatToolbarModule,
     NgChartsModule,BrowserAnimationsModule,
-    FormsModule,MatDialogModule,ReactiveFormsModule
+    FormsModule,MatDialogModule,ReactiveFormsModule,FormsModule,
+    MatTableModule
   ],
   providers: [
     provideClientHydration(),
