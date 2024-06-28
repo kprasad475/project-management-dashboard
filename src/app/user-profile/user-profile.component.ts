@@ -11,7 +11,7 @@ export class UserProfileComponent {
     name: 'John Doe',
     email: 'john.doe@example.com',
     bio: 'This is the bio of John Doe.',
-    avatar: 'assets/avatar.jpg',
+    avatar: 'assets/littleboy.jpg',
     linkedin: 'https://www.linkedin.com/in/johndoe',
     twitter: 'https://twitter.com/johndoe'
   };
