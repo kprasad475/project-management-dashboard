@@ -18,6 +18,7 @@ export class UserProfileComponent {
 
   isEditing = false;
   editProfileForm: FormGroup;
+  updatedDetails:any [] = []; 
 
   constructor(private fb: FormBuilder) { }
 
@@ -29,14 +30,7 @@ export class UserProfileComponent {
       avatar: [this.user.avatar]
     });
   }
-  ngOnInits(){
-    this.editProfileForm = this.fb.group({
-      name:[this.user.name],
-      email:[this.user.email],
-      bio:[this.user.bio],
-      avatar:[this.user.avatar]
-    })
-  }
+ 
 
   editProfile(): void {
     this.isEditing = true;
@@ -48,7 +42,10 @@ export class UserProfileComponent {
 
   saveProfile(): void {
     if (this.editProfileForm.valid) {
-      this.user = { ...this.user, ...this.editProfileForm.value };
+     // this.user = { ...this.user, ...this.editProfileForm.value };
+   // this.updatedDetails.push(this.editProfileForm.value)
+    
+      console.log(this.updatedDetails)
       this.isEditing = false;
     }
   }

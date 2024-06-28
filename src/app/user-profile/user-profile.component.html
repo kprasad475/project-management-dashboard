@@ -2,9 +2,9 @@
   <div class="user-header">
     <img src="assets/avatar.jpg" alt="Avatar" class="avatar">
     <div class="user-info">
-      <h2>John Doe</h2>
-      <p class="email">john.doe example.com</p>
-      <p class="bio">This is the bio of John Doe.</p>
+      <h2>{{user.name}}</h2>
+      <p class="email">{{user.email}}</p>
+      <p class="bio">{{user.bio}}</p>
       <button class="edit-profile-btn" (click)="editProfile()">Edit Profile</button>
     </div>
   </div>
@@ -12,7 +12,7 @@
     <h3>Social Media</h3>
     <a href="#" class="social-link">🔗</a>
   </div>
-  <div class="user-details">
+  <div  *ngIf="isEditing"class="user-details">
     <h3>Details</h3>
     <div class="details-form">
       <input type="text" [(ngModel)]="user.name" placeholder="Name">
