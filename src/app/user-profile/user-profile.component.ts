@@ -29,11 +29,12 @@ export class UserProfileComponent {
       bio: [this.user.bio],
       avatar: [this.user.avatar]
     });
+
   }
- 
 
   editProfile(): void {
-    this.isEditing = true;
+    this.isEditing = !this.isEditing;
+    
   }
 
   cancelEdit(): void {
