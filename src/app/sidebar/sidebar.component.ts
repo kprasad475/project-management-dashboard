@@ -17,4 +17,10 @@ export class SidebarComponent {
   navigateToTableList():void{
     this.router.navigate(['/table-list'])
   }
+  navigateToTypography(){
+    this.router.navigate(['/typography'])
+  }
+  navigateToIcons(){
+    this.router.navigate(['icons'])
+  }
 }

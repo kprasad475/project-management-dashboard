@@ -23,7 +23,9 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { TableListComponent } from './table-list/table-list.component';
-import { MatTableModule } from '@angular/material/table'  
+import { MatTableModule } from '@angular/material/table';
+import { TypographyComponent } from './typography/typography.component';
+import { IconsComponent } from './icons/icons.component'  
 
 
 
@@ -37,7 +39,9 @@ import { MatTableModule } from '@angular/material/table'
     ChartComponent,
     CardComponent,
     UserProfileComponent,
-    TableListComponent
+    TableListComponent,
+    TypographyComponent,
+    IconsComponent
   ],
   imports: [
     BrowserModule,
