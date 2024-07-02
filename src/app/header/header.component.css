@@ -2,9 +2,11 @@ mat-toolbar {
     position: fixed;
     top: 0;
     left: 250px;
+    background-color: #4bd3b3fa;
     width: calc(100% - 250px);
     .spacer {
       flex: 1;
     }
+    
   }
   
