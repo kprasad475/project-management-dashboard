@@ -25,7 +25,9 @@ import { provideHttpClient } from '@angular/common/http';
 import { TableListComponent } from './table-list/table-list.component';
 import { MatTableModule } from '@angular/material/table';
 import { TypographyComponent } from './typography/typography.component';
-import { IconsComponent } from './icons/icons.component'  
+import { IconsComponent } from './icons/icons.component';
+import { UserDialogComponent } from './user-dialog/user-dialog.component'  
+import { MatTableDataSource } from '@angular/material/table';
 
 
 
@@ -41,7 +43,8 @@ import { IconsComponent } from './icons/icons.component'
     UserProfileComponent,
     TableListComponent,
     TypographyComponent,
-    IconsComponent
+    IconsComponent,
+    UserDialogComponent
   ],
   imports: [
     BrowserModule,
